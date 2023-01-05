@@ -1,5 +1,35 @@
+*********************************************
 ** Understanding .NET Runtime and .NET SDK **
 
 SDK ==> to build and run .NET apps  |  not follow semantic versioning
 
 Runtime ==> to run .NET apps |  follow semantic versioning
+
+*********************************
+** Understanding .NET Standard **
+It is important to understand that .NET Standard is just a standard. You are not able to install
+.NET Standard in the same way that you cannot install HTML5. To use HTML5, you must
+install a web browser that implements the HTML5 standard.
+To use .NET Standard, you must install a .NET platform that implements the .NET Standard
+specification. .NET Standard 2.0 is implemented by the latest versions of .NET Framework,
+.NET Core, and Xamarin.
+
+The situation with .NET in 2019 was that there were three forked .NET platforms controlled
+by Microsoft, as shown in the following list:
+• .NET Core: for cross-platform and new apps
+• .NET Framework: for legacy apps
+• Xamarin: for mobile apps
+
+Microsoft defined .NET Standard: a specification for
+a set of APIs that all .NET platforms could implement to indicate what level of compatibility
+they have. For example, basic support is indicated by a platform being compliant with .NET
+Standard 1.4.
+
+*****************************************
+** Understanding intermediate language **
+The C# compiler (named Roslyn) used by the dotnet CLI tool converts your C# source code
+into intermediate language (IL) code and stores the IL in an assembly (a DLL or EXE file).
+
+ IL code statements are like assembly language instructions, which are executed by .NET's virtual
+machine, known as CoreCLR.
+
