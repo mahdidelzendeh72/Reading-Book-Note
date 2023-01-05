@@ -1,0 +1,5 @@
+** Understanding .NET Runtime and .NET SDK **
+
+SDK ==> to build and run .NET apps  |  not follow semantic versioning
+
+Runtime ==> to run .NET apps |  follow semantic versioning
