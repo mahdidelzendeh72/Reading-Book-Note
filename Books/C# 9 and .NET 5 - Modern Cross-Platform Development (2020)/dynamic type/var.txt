@@ -1,0 +1,15 @@
+You can use the var keyword to declare local variables. The compiler will infer the type
+from the value that you assign after the assignment operator, =.
+A literal number without a decimal point is inferred as an int variable, that is, unless
+you add the L suffix, in which case, it infers a long variable.
+A literal number with a decimal point is inferred as double unless you add the M suffix,
+in which case, it infers a decimal variable, or the F suffix, in which case, it infers a
+float variable. Double quotes indicate a string variable, single quotes indicate a char
+variable, and the true and false values infer a bool type.
+
+
+
+implicity type must declear and initialize at the same type
+
+--- var myvariable;===>>>  error
+--- var myvariable=10;===>>>  true 
