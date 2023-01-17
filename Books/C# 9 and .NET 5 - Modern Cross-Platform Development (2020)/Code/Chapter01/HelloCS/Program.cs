@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Reflection;
-foreach (var r in Assembly.GetEntryAssembly()
-.GetReferencedAssemblies())
+foreach (var r in Assembly.GetEntryAssembly().GetReferencedAssemblies())
 {
 // load the assembly so we can read its details
 var a = Assembly.Load(new AssemblyName(r.FullName));
