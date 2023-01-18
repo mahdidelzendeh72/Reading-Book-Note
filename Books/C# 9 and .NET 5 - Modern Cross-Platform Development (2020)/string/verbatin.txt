@@ -1,0 +1,20 @@
+In C#, a verbatim string is created using a special symbol @.
+ @ is known as a verbatim identifier.
+ If a string contains @ as a prefix followed by double quotes,
+ then compiler identifies that string as a verbatim string and compile that string.
+ The main advantage of @ symbol is to tell the string constructor to ignore escape characters and line breaks.
+ There is mainly three uses of @ symbol which is as follows:
+
+ Use 1: Keyword as an Identifier This symbol allows using a keyword as 
+        an identifier. The @ symbol prefixes the keyword, so the compiler takes keyword as
+        an identifier without any error as shown in the below example:
+        ------string[] @for = {"C#", "PHP", "Java", "Python"};
+        ------var @var=124;
+
+
+Use 2: For printing the escape sequences in string literals and also using the line breaks etc.
+       in a string literal without any escape sequence. If one will put the escape sequence
+       like “\\” (for backslash), “\u” (Unicode escape sequence), “\x” (hexadecimal escape sequence) etc.
+       in a string literal without using @ symbol then these sequences will be interpreted by compiler automatically.
+       But “” (double quotes) are not interpreted literally. Its like a string interpolation.
+       Let’s see different cases with and without @ symbol.
