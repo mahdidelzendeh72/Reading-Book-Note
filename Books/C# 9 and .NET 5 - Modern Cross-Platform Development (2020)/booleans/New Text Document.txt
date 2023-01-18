@@ -1,0 +1,2 @@
+Booleans can only contain one of the two literal values true or false, as shown in the following
+code:

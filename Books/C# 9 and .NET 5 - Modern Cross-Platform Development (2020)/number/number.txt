@@ -1,0 +1,41 @@
+******************* number ********************************
+
+Numbers are data that we want to perform an arithmetic calculation on, for example,
+multiplying. A telephone number is not a number. To decide whether a variable should be
+stored as a number or not, ask yourself whether you need to perform arithmetic operations
+on the number or whether the number includes non-digit characters such as parentheses or
+hyphens to format the number as (414) 555-1234. In this case, the number is a sequence of
+characters, so it should be stored as a string.
+
+Numbers can be natural numbers, such as 42, used for counting (also called whole numbers);
+they can also be negative numbers, such as -42 (called integers); or, they can be real numbers,
+such as 3.9 (with a fractional part), which are called single- or double-precision floating point
+numbers in computing
+*********************************************************
+You might know that computers store everything as bits. The value of a bit is either 0 or 1. This
+is called a binary number system. Humans use a decimal number system.
+******************** int ***********************************
+Computers can always exactly represent integers using the int type or one of its sibling types
+such as long and short
+*********************** float ******************************
+https://ciechanow.ski/exposing-floating-point/
+************************************************
+
+The double type is not guaranteed to be accurate because some numbers literally cannot
+be represented as floating-point values.
+
+As a rule of thumb, you should only use double when accuracy, especially when
+comparing the equality of two numbers, is not important. An example of this may be
+when you're measuring a person's height
+
+The decimal type is accurate because it stores the number as a large integer and shifts the
+decimal point. For example, 0.1 is stored as 1, with a note to shift the decimal point one place
+to the left. 12.75 is stored as 1275, with a note to shift the decimal point two places to the left.
+
+
+******************* tip *************************
+
+Good Practice: Use int for whole numbers and double for real numbers that
+will not be compared to other values. Use decimal for money, CAD drawings,
+general engineering, and wherever the accuracy of a real number is important
+

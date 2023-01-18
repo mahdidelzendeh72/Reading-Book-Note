@@ -1,0 +1,8 @@
+There is another special type named dynamic that can also store any type of data, but even
+more than object, its flexibility comes at the cost of performance. The dynamic keyword was
+introduced in C# 4.0. However, unlike object, the value stored in the variable can have its
+members invoked without an explicit cast. 
+
+
+object:    need cast to invoke memeber           compiletime     good performance   IntelliSense
+dynamic :   dont need cast to invoke member      runtime         bad performance    no IntelliSense
