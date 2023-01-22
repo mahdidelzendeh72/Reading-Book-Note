@@ -2,3 +2,6 @@ https://www.geeksforgeeks.org/c-sharp-string/?ref=lbp
 https://www.geeksforgeeks.org/c-sharp-verbatim-string-literal/?ref=lbp
 https://www.geeksforgeeks.org/c-sharp-string-class/?ref=lbp
 https://www.geeksforgeeks.org/stringbuilder-in-c-sharp/?ref=lbp
+
+https://unicodelookup.com/
+https://blog.hubspot.com/website/what-is-utf-8#:~:text=UTF%2D8%20is%20an%20encoding,or%20%E2%80%9CUnicode%20Transformation%20Format.%E2%80%9D

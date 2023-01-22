@@ -1,0 +1,35 @@
+**********  value type ********
+Most of the primitive types except string are value types, which means that they must have
+a value.
+
+You can determine the default value of a type using the default() operator.
+
+--bool
+--DateTime
+--int
+
+******* refrence type ************
+The string type is a reference type. This means that string variables contain the memory
+address of a value, not the value itself.
+
+---------- null ---------
+A reference type variable can have a null value, which
+is a literal that indicates that the variable does not reference anything (yet). null is the default
+for all reference types.
+
+--string
+--class
+
+****** null in value type *****
+By default, value types like int and DateTime must always have a value, hence their name.
+Sometimes, for example, when reading values stored in a database that allows empty,
+missing, or null values, it is convenient to allow a value type to be null. We call this
+a nullable value type.
+You can enable this by adding a question mark as a suffix to the type when declaring a variable.
+
+--int? thisCouldBeNull = null;
+--Nullable<int> thisCouldBeNull =null;
+--public struct Nullable<T> where T : struct
+
+
+
