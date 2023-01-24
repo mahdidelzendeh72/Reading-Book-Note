@@ -1,0 +1,59 @@
+**********************formating *************************************
+Formatting is the process of converting an instance of a class or structure,
+ or an enumeration value, to a string representation.
+ The purpose is to display the resulting string to users or to deserialize it later to restore the original data type.
+
+A variable or expression can be formatted using a format string after a comma or colon.
+
+Parsing is the inverse of formatting.
+ A parsing operation creates an instance of a data type from its string representation.
+ For more information, see Parsing Strings.
+ For information about serialization and deserialization, see Serialization in .NET.
+
+*********************Formatting using numbered positional arguments *****************
+
+This feature is supported by methods like Write and WriteLine, and for methods that do not
+support the feature, the string parameter can be formatted using the Format method of string.
+
+
+******************Formatting using interpolated strings**********************
+
+A string prefixed with $ can
+use curly braces around the name of a variable or expression to output the current value of that
+variable or expression at that position in the string
+*********format syntax **********
+{ index [, alignment ] [ : formatString ] }
+
+alignment >>>> Each format item can have an alignment, which is useful when outputting tables of values,
+	some of which might need to be left- or right-aligned within a width of characters. Alignment
+	values are integers. Positive integers are right-aligned and negative integers are left-aligned.
+****** how can format ********
+1- Overriding the Object.ToString method to define a custom string
+2- Defining format specifiers that enable the string representation of an object's value to take multiple forms
+3- Using format providers to implement the formatting conventions of a specific culture
+4- Implementing the IFormattable interface to support both string
+   conversion with the Convert class and composite formatting.
+5- Using composite formatting to embed the string representation of a value in a larger string.
+6- Using string interpolation, a more readable syntax to embed the string representation of a value in a larger string.
+7-Implementing ICustomFormatter and IFormatProvider to provide a complete custom formatting solution.
+****** format meaning ************
+format	         example      			  output		meaning
+------		-------				 -------		----------
+  N0		 1000:N0			 1,000		 number with thousand separators and no decimal places
+
+  Na		 1000:N2			 1,000.00		 number with thousand separators and a number pricision after point places
+
+  C	   	 10:C				 £10		 currency(base system culture)
+
+  X              60312				 EB98		 hexadecimal value
+
+  G/F		enum.Monday			 Monday		 show string name in enum
+
+  D		enum.Monday			 1		 show number in enum 	
+
+  D		DateTime(2009, 6, 30):D	         Tuesday, June 30, 2009
+
+yyyy/mm/dd hh:mm:ss.ffff t zzz             2008/11/15 07:45:00.0000 P -08:00
+
+MMMM dd, yyyy (dddd)                       August 28, 2009 (Friday)
+
