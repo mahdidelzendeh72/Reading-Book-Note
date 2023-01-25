@@ -1,0 +1,22 @@
+when run a application in different platform(windows, macOs,linux) , some API calls may fail.
+
+1-Handling platforms that do not support an API>>>> using  try-catch
+--  try
+--{
+--CursorSize = int.Parse(args[2]);
+--}
+--catch (PlatformNotSupportedException)
+--{
+--WriteLine("The current platform does not support changing the size of
+--the cursor.");
+--}
+
+2- using OperatingSystem class >>>> The OperatingSystem class has equivalent methods for other common OSes like Android, iOS,
+   Linux, macOS, and even the browser, which is useful for Blazor web components.
+
+--if (OperatingSystem.IsWindows())
+--{
+--// execute code that only works on Windows
+--}
+
+3-using Environment class>>>> it is usefull for differrent caommand and syntax where are different between platform
