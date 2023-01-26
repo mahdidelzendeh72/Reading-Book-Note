@@ -1,0 +1,34 @@
+*********************** string  *********
+*** char ***
+
+For text, a single letter, such as an A, is stored as a char type and is assigned using single
+quotes around the literal value, or assigning the return value of a function call, as shown
+in the following code:
+
+---char letter = 'A'; // assigning literal characters
+---char digit = '1';
+---char symbol = '$';
+---char userChoice = GetKeystroke(); // assigning from a function
+
+*** multiple letters ***
+
+For text, multiple letters, such as Bob, are stored as a string type and are assigned using double
+quotes around the literal value, or assigning the return value of a function call, as shown in the
+following code:
+
+---string firstName = "Bob"; // assigning literal strings
+---string lastName = "Smith";
+---string phoneNumber = "(215) 555-4256";
+---// assigning a string returned from a function call
+---string address = GetAddressFromDatabase(id: 563);
+
+*** verbatim strings ***
+Literal string: Characters enclosed in double-quote characters. They can use escape
+characters like \t for tab
+
+Verbatim string: A literal string prefixed with @ to disable escape characters so that a
+backslash is a backslash
+
+Interpolated string: A literal string prefixed with $ to enable embedded formatted
+variables. You will learn more about this later in this chapter
+
