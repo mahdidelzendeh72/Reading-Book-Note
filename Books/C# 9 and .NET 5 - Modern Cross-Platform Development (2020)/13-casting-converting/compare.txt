@@ -1,0 +1,12 @@
+1-One difference between casting and converting is that converting rounds the double value 9.8
+up to 10 instead of trimming the part after the decimal point.
+--double g = 9.8;
+--int h = ToInt32(g);>>>> 10
+--int f=(int)g;>>>>9
+
+
+2-One problem with the Parse method is that it gives errors if the string cannot be
+converted.
+
+3-You can also use methods of the System.Convert type to convert string values into other types;
+however, like the Parse method, it gives an error if it cannot convert.

@@ -1,0 +1,2 @@
+1-The switch expressions do not support break and return keywords.
+  The underscore (_) character replaces the default keyword to signify that it should match anything if reached.
