@@ -1,0 +1,62 @@
+*****binary operators *************
+Most operators are binary, meaning that they work on two operands, as shown in the
+following pseudocode:
+--var resultOfOperation = firstOperand operator secondOperand;
+
+
+Other arithmetic operators are usually binary.
+
+*****unary operators **************
+
+Some operators are unary, meaning they work on a single operand, and can apply before or
+after the operand, as shown in the following pseudocode:
+--var resultOfOperation = onlyOperand operator;
+--var resultOfOperation2 = operator onlyOperand;
+
+1-incrementors
+2-retrieving
+3-type
+4-size
+
+--int x = 5;
+--int incrementedByOne = x++;
+--int incrementedByOneAgain = ++x;
+--Type theTypeOfAnInteger = typeof(int);
+--int howManyBytesInAnInteger = sizeof(int);
+
+
+**** ternary operators *************
+--var resultOfOperation = firstOperand firstOperator secondOperand secondOperator thirdOperand;
+**** logical operators*************
+
+For the AND & logical operator, both operands must be true for the result to be true. For the
+OR | logical operator, either operand can be true for the result to be true. For the XOR ^ logical
+operator, either operand can be true (but not both!) for the result to be true.
+
+
+**** Conditional logical operators*******************
+also knows as short-circuiting Boolean operators
+Conditional logical operators are similar to logical operators, but you use two symbols instead
+of one, for example, && instead of &, or || instead of |.
+
+-- a & b >>> check bolean a and b for result
+-- a && b >>> if a is fulse the b dont excute or checked;>>>>> short-circuiting
+
+
+-- a | b >>> check bolean a and b for result.
+-- a || b >>> if a is True the b dont excute or checked;>>>>> short-circuiting
+
+
+****** Bitwise and binary shift operators*****
+
+****** Miscellaneous operators*******
+
+
+• =   is the assignment operator
+• .   is the member access operator
+• ()  is the invocation operator
+
+• nameof returns the short name (without the namespace) of a variable, type, or member
+  as a string value, which is useful when outputting exception messages.
+• sizeof returns the size in bytes of simple types, which is useful for determining the
+  efficiency of data storage.
