@@ -36,12 +36,17 @@ alignment >>>> Each format item can have an alignment, which is useful when outp
 5- Using composite formatting to embed the string representation of a value in a larger string.
 6- Using string interpolation, a more readable syntax to embed the string representation of a value in a larger string.
 7-Implementing ICustomFormatter and IFormatProvider to provide a complete custom formatting solution.
+**** format exception ****
+A FormatException is thrown at run time if a parameter specifier designates
+ an item outside the bounds of the list of objects.
 ****** format meaning ************
 format	         example      			  output		meaning
 ------		-------				 -------		----------
   N0		 1000:N0			 1,000		 number with thousand separators and no decimal places
 
-  Na		 1000:N2			 1,000.00		 number with thousand separators and a number pricision after point places
+  Na		 1000:N2			 1,000.00        number with thousand separators and a number pricision after point places
+
+  E		1000:E				 1E+3		scince mode
 
   C	   	 10:C				 £10		 currency(base system culture)
 
