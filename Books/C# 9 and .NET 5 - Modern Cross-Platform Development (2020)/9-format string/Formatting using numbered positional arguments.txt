@@ -1,4 +1,4 @@
-**********************formating *************************************
+ **********************formating *************************************
 Formatting is the process of converting an instance of a class or structure,
  or an enumeration value, to a string representation.
  The purpose is to display the resulting string to users or to deserialize it later to restore the original data type.
