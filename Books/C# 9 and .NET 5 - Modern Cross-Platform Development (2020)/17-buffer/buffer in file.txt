@@ -1,0 +1,5 @@
+Any type that represents a file usually implements a buffer to improve performance.
+Instead of writing immediately to the file, data is written to an in-memory buffer and
+only once the buffer is full will it be written in one chunk to the file. This behavior can
+be confusing while debugging because we do not immediately see the results! Enabling
+AutoFlush means it calls the Flush method automatically after every write

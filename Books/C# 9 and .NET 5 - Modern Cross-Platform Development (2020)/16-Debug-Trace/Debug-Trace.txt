@@ -1,0 +1,23 @@
+------------------- compare ------------------------
+• Debug is used to add logging that gets written during development.
+• Trace is used to add logging that gets written during both development and runtime.
+
+Good Practice: When running with the Debug configuration, both Debug and
+Trace are active and will show their output in DEBUG CONSOLE. When
+running with the Release configuration, only the Trace output is shown.
+You can therefore use Debug.WriteLine calls liberally throughout your code,
+knowing they will be stripped out automatically when you build the release
+version of your application
+------------------- Instrumenting with Debug and Trace ----------------
+Console App: WriteLine method to provide output to the console or TERMINAL or DEBUG CONSOLE windoes.
+
+Trace & debug Class: more flexibility in where they write out to.
+
+---- tip: buffer anf flush ---------------
+
+Any type that represents a file usually implements a buffer to improve performance.
+Instead of writing immediately to the file, data is written to an in-memory buffer and
+only once the buffer is full will it be written in one chunk to the file. This behavior can
+be confusing while debugging because we do not immediately see the results! Enabling
+AutoFlush means it calls the Flush method automatically after every write
+
