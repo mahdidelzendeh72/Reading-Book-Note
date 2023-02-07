@@ -1,6 +1,7 @@
 dotnet --list-sdks
 dotnet --list-runtimes
 dotnet new console
+dotnet test
 dotnet run
 dotnet help new
 dotnet new <TEMPLATE> [--dry-run] [--force] [-lang|--language {"C#"|"F#"|VB}]
