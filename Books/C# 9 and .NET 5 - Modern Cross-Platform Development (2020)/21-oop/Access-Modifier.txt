@@ -1,0 +1,3 @@
+>>>the implicit access modifier for a class is internal
+
+tip: هر جا بتوان بریکپوینت گذاشت در واقع با یک متد روبه رو هستیم
