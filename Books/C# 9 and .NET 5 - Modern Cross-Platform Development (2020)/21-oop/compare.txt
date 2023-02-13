@@ -1,0 +1,10 @@
+1-Read Only: set in instanciate of a class and differrent instance may have differrent read only field.
+             coud set in constructor.
+2-static: is shared between different instances and can set when 
+          the project start and after create class it will not change any more.
+		
+3-const: the value of field will never ever change and must set in class directely;
+         must declear at compile time.
+         coud not set in constructor.
+>>> Pi number in math.
+>>> e number in math logharithm
