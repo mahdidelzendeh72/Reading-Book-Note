@@ -1,0 +1,27 @@
+Tuples are an efficient way to combine two or more values
+into a single unit
+
+
+Naming the fields of a tuple
+To access the fields of a tuple, the default names are Item1, Item2, and so on.
+You can explicitly specify the field names.
+
+
+Inferring tuple names
+If you are constructing a tuple from another object, you can use a feature introduced in C# 7.1
+called tuple name inference.
+
+
+
+Deconstructing tuples
+You can also deconstruct tuples into separate variables. The deconstructing declaration has the
+same syntax as named field tuples, but without a named variable for the tuple, as shown in the
+following code:
+// store return value in a tuple variable with two fields
+(string name, int age) tupleWithNamedFields = GetPerson();
+// tupleWithNamedFields.name
+// tupleWithNamedFields.age
+// deconstruct return value into two separate variables
+(string name, int age) = GetPerson();
+// name
+// age
