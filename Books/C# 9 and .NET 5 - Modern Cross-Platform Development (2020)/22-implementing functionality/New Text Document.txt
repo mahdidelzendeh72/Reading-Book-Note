@@ -1,0 +1,6 @@
+---------- Implementing functionality -----------
+1-Static and Instaccing Method
+
+2-using operators
+
+3-using local functions
