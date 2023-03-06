@@ -1,0 +1,5 @@
+------- Extending types when you can't inherit-----------
+
+1- Using static methods to reuse functionality
+
+2- Using extension methods to reuse functionality
