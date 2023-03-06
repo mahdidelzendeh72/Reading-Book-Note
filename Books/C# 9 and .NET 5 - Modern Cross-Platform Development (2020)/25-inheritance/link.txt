@@ -1,0 +1,9 @@
+• Operator (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
+• Delegates: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features-delegates-and-lambda-expressions
+• Events Change to: C# reference: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
+• Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/typesinterfaces
+• Generics (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics
+• Reference Types (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types
+• Value Types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types
+• Inheritance (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance
+• Finalizers (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors
