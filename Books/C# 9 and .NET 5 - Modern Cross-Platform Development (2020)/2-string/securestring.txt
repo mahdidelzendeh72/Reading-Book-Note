@@ -1,0 +1,32 @@
+using System;
+using System.Runtime.InteropServices;
+using System.Security;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create a SecureString from a password
+        SecureString password = new SecureString();
+        foreach (char c in "MySecurePassword")
+        {
+            password.AppendChar(c);
+        }
+
+        // Use the SecureString to log in to a database
+        string username = "myUsername";
+        IntPtr usernamePtr = Marshal.StringToCoTaskMemUni(username);
+        IntPtr passwordPtr = Marshal.SecureStringToCoTaskMemUnicode(password);
+        try
+        {
+            // Authenticate with the database using the username and password
+            // ...
+        }
+        finally
+        {
+            // Free the unmanaged memory used by the SecureString and username
+            Marshal.ZeroFreeCoTaskMemUnicode(passwordPtr);
+            Marshal.ZeroFreeCoTaskMemUnicode(usernamePtr);
+        }
+    }
+}
