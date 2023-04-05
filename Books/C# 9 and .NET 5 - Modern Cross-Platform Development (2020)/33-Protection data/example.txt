@@ -1,0 +1,34 @@
+
+Let's say we want to encrypt the message "Meet me at 8pm" using the block cipher mode of operation. We will divide the message into two blocks of 64 bits each. We generate a random 64-bit value as the initialization vector (IV) for the first block. 
+
+First block:
+Message: "Meet me at "
+IV: 1010101010101010
+Secret key: 1100110011001100
+
+We XOR the IV with the first 64 bits of the message to create the plaintext for the first block:
+
+Plaintext: 10101010101010101101101101100100
+
+We then encrypt the plaintext using the secret key to produce the ciphertext:
+
+Ciphertext: 00110011001100101011100111100010
+
+We use this ciphertext as the IV for the next block.
+
+Second block:
+Message: "8pm"
+IV: 00110011001100101011100111100010
+Secret key: 1100110011001100
+
+We XOR the IV with the second 64 bits of the message to create the plaintext for the second block:
+
+Plaintext: 00110011001100101011100111000000
+
+We then encrypt the plaintext using the secret key to produce the ciphertext:
+
+Ciphertext: 11100010101011011110011101111011
+
+The encrypted message would be the concatenation of the two ciphertext blocks:
+
+0011001100110010101110011110001001100110011001010111001111000111000101100110011001010111011110011101110111
