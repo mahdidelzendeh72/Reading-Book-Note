@@ -1,0 +1,8 @@
+•Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/
+threading/threads-and-threading
+• Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
+• await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/languagereference/keywords/await
+• Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/
+parallel-programming/
+• Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/
+standard/threading/overview-of-synchronization-primitives
