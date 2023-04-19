@@ -6,3 +6,8 @@ threading/threads-and-threading
 parallel-programming/
 • Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/
 standard/threading/overview-of-synchronization-primitives
+
+
+
+----------------------
+https://dotnet.microsoft.com/en-us/learn/dotnet/architecture-guides
