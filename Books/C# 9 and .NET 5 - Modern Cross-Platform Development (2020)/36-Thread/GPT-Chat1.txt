@@ -1,0 +1,106 @@
+1-i dont understood Event and Evendhandlering in C#, can you explain it to me and say it usage by example?
+2-whtas happend that we dont have event? 
+3-can we make our custom event?
+4-why event is not threadsafe?
+5-what we must do to have threadsafe event?
+
+_____________________ ____________________________________________________________________________
+
+1. In C#, an event is a mechanism for communication between objects, where one object can notify other objects when a certain action occurs. An event is declared using the event keyword and is associated with an event handler method that is executed when the event is raised. Here's an example:
+
+public class Button {
+    public event EventHandler Click;
+    
+    public void OnClick() {
+        if (Click != null) {
+            Click(this, EventArgs.Empty);
+        }
+    }
+}
+
+public class Form {
+    private Button button;
+    
+    public Form() {
+        button = new Button();
+        button.Click += Button_Click;
+    }
+    
+    private void Button_Click(object sender, EventArgs e) {
+        // Handle the button click event
+    }
+}
+
+
+In this example, the Button class declares an event called Click and provides a method called OnClick that raises the event. The Form class subscribes to the Click event by adding a handler method (Button_Click) to the event's invocation list.
+
+2. Without events, objects would need to be tightly coupled to each other in order to communicate. For example, if an object needed to notify another object of a change, it would need to call a method on that object directly. This can lead to complex and brittle code, as changes to one object can have unintended consequences on other objects.
+
+3. Yes, you can create your own custom events by declaring an event with a delegate type that matches the signature of the event handler method. Here's an example:
+
+public class MyObject {
+    public delegate void MyEventHandler(object sender, EventArgs e);
+    
+    public event MyEventHandler MyEvent;
+    
+    public void DoSomething() {
+        // Raise the MyEvent event
+        if (MyEvent != null) {
+            MyEvent(this, EventArgs.Empty);
+        }
+    }
+}
+
+public class MyListener {
+    private MyObject myObject;
+    
+    public MyListener(MyObject myObject) {
+        this.myObject = myObject;
+        myObject.MyEvent += MyEventHandler;
+    }
+    
+    private void MyEventHandler(object sender, EventArgs e) {
+        // Handle the MyEvent event
+    }
+}
+
+
+In this example, MyObject declares a custom event called MyEvent with a delegate type of MyEventHandler. MyListener subscribes to the MyEvent event by adding a handler method (MyEventHandler) to the event's invocation list.
+
+4. Events are not inherently thread-safe because they can be accessed by multiple threads concurrently. If two threads attempt to raise an event at the same time, there is a risk of race conditions and other synchronization issues.
+
+5. To make an event thread-safe, you can use locking or other synchronization mechanisms to ensure that only one thread can access the event at a time. For example:
+
+public class MyObject {
+    private readonly object lockObject = new object();
+    
+    public event EventHandler MyEvent;
+    
+    public void DoSomething() {
+        lock (lockObject) {
+            // Raise the MyEvent event
+            if (MyEvent != null) {
+                MyEvent(this, EventArgs.Empty);
+            }
+        }
+    }
+}
+
+public class MyListener {
+    private readonly object lockObject = new object();
+    private MyObject myObject;
+    
+    public MyListener(MyObject myObject) {
+        this.myObject = myObject;
+        myObject.MyEvent += MyEventHandler;
+    }
+    
+    private void MyEventHandler(object sender, EventArgs e) {
+        lock (lockObject) {
+            // Handle the MyEvent event
+        }
+    }
+}
+
+
+In this example, both MyObject and MyListener use locking to ensure that only one thread can access the event at a time. This helps to prevent race conditions and other synchronization issues.
