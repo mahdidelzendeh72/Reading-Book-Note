@@ -11,3 +11,11 @@ standard/threading/overview-of-synchronization-primitives
 
 ----------------------
 https://dotnet.microsoft.com/en-us/learn/dotnet/architecture-guides
+
+
+-------------
+https://learn.microsoft.com/en-us/dotnet/api/system.web.httpcontext?view=netframework-4.8.1
+
+https://www.vaughanreid.com/2020/05/using-in-line-middleware-in-asp-net-core/
+
+https://andrewlock.net/visualizing-asp-net-core-endpoints-using-graphvizonline-and-the-dot-language/
