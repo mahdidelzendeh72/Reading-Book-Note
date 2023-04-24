@@ -19,3 +19,27 @@ https://learn.microsoft.com/en-us/dotnet/api/system.web.httpcontext?view=netfram
 https://www.vaughanreid.com/2020/05/using-in-line-middleware-in-asp-net-core/
 
 https://andrewlock.net/visualizing-asp-net-core-endpoints-using-graphvizonline-and-the-dot-language/
+
+------------------
+
+
+• ASP.NET Core fundamentals: https://docs.microsoft.com/en-us/aspnet/core/
+fundamentals/
+• Static files in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/
+fundamentals/static-files
+• Introduction to Razor Pages in ASP.NET Core: https://docs.microsoft.com/en-us/
+aspnet/core/razor-pages/
+• Razor syntax reference for ASP.NET Core: https://docs.microsoft.com/en-us/
+aspnet/core/mvc/views/razor
+• Layout in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/
+views/layout
+• Tag Helpers in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/
+views/tag-helpers/intro
+• ASP.NET Core Razor Pages with EF Core: https://docs.microsoft.com/en-us/
+aspnet/core/data/ef-rp/intro
+• DEEP DIVE: HOW IS THE ASP.NET CORE MIDDLEWARE PIPELINE BUILT?
+https://www.stevejgordon.co.uk/how-is-the-asp-net-core-middleware-pipelinebuilt
+
+
+------------------
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-7.0
