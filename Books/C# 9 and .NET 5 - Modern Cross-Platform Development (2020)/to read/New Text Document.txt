@@ -43,3 +43,19 @@ https://www.stevejgordon.co.uk/how-is-the-asp-net-core-middleware-pipelinebuilt
 
 ------------------
 https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-7.0
+
+https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?tabs=netcore-cli&view=aspnetcore-7.0
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters
+https://docs.microsoft.com/en-us/aspnet/core/security/authorization/introduction
+
+https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response?view=aspnetcore-7.0
+
+https://learn.microsoft.com/en-us/aspnet/core/mvc/advanced/custom-model-binding?view=aspnetcore-7.0
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation
