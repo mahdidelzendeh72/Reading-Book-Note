@@ -1,0 +1,147 @@
+public static class TypeNormalizer
+    {
+        /// <summary>
+        /// متد فلت ساخت یک تایپ
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="instance"></param>
+        /// <param name="flags"></param>
+        /// <returns></returns>
+        public static IEnumerable<StringKeyValueContract> MakeFlat(this Type type, object instance, BindingFlags flags = BindingFlags.Public | BindingFlags.Instance)
+        {
+
+
+            // get the properties of the class using reflection
+            PropertyInfo[] properties = type.GetProperties(flags);
+
+            // create instanceValueContract objects and populate them with values from the class instance
+            foreach (PropertyInfo property in properties)
+            {
+                object propertyValue = null;
+                try
+                {
+                    propertyValue = property.GetValue(instance);
+                }
+                catch (Exception ex)
+                {
+                    //  ex.LogError($"GetValue in GetinstanceValues has error {property.Name}!");
+                }
+                if (propertyValue == null)
+                {
+                    continue;
+                }
+
+                if (property.PropertyType.IsPrimitive || property.PropertyType == typeof(string))
+                {
+                    // handle primitive types and strings
+                    return HandlePrimitiveAndStringType(property, propertyValue);
+                }
+                else if (property.PropertyType.IsGenericType && property.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+                {
+                    // handle lists
+                    return HandleListType(property, propertyValue);
+                }
+                else if (property.PropertyType.IsEnum)
+                {
+                    // handle enums
+                  return  HandleEnumType( property, propertyValue);
+                }
+                else
+                {
+                    // handle nested properties
+                  return  HandleNestedType( property, propertyValue);
+                }
+            }
+
+            
+        }
+        /// <summary>
+        /// هندل کردن تایپ های nested
+        /// </summary>
+        /// <param name="keyValueList"></param>
+        /// <param name="property"></param>
+        /// <param name="propertyValue"></param>
+        private static IEnumerable<StringKeyValueContract> HandleNestedType(  PropertyInfo property, object propertyValue)
+        {
+            IEnumerable<StringKeyValueContract> nestedkeyValueList = MakeFlat(property.PropertyType, propertyValue);
+            foreach (StringKeyValueContract nestedinstanceValueContract in nestedkeyValueList)
+            {
+                nestedinstanceValueContract.Key = nestedinstanceValueContract.Key;
+              yield return  nestedinstanceValueContract;
+            }
+        }
+        /// <summary>
+        /// هندل کردن تایپ enum
+        /// </summary>
+        /// <param name="keyValueList"></param>
+        /// <param name="property"></param>
+        /// <param name="propertyValue"></param>
+        private static IEnumerable<StringKeyValueContract> HandleEnumType( PropertyInfo property, object propertyValue)
+        {
+            StringKeyValueContract instanceValueContract = new StringKeyValueContract();
+            instanceValueContract.Key = property.Name;
+            instanceValueContract.Value = propertyValue.ToString();
+            yield return instanceValueContract;
+        }
+        /// <summary>
+        /// هندل کردن تایپ از نوع لیست
+        /// </summary>
+        /// <param name="keyValueList"></param>
+        /// <param name="property"></param>
+        /// <param name="propertyValue"></param>
+        private static IEnumerable<StringKeyValueContract> HandleListType(PropertyInfo property, object propertyValue)
+        {
+            IEnumerable list = (IEnumerable)propertyValue;
+            foreach (object item in list)
+            {
+                if (item == null)
+                {
+                    continue;
+                }
+
+                if (item.GetType().IsPrimitive || item.GetType() == typeof(string))
+                {
+                    // handle primitive types and strings in lists
+                    StringKeyValueContract trackValueContract = new StringKeyValueContract();
+                    trackValueContract.Key = $"{property.Name}";
+                    trackValueContract.Value = item.ToString();
+                    yield return trackValueContract;
+
+                }
+                else if (item.GetType().IsEnum)
+                {
+                    // handle enums
+                    // handle primitive types and strings in lists
+                    StringKeyValueContract trackValueContract = new StringKeyValueContract();
+                    trackValueContract.Key = $"{property.Name}";
+                    trackValueContract.Value = item.ToString();
+                    yield return trackValueContract;
+                }
+                else
+                {
+                    // handle nested classes in lists
+                    IEnumerable<StringKeyValueContract> nestedTrackValueContracts = MakeFlat(item.GetType(), item);
+                    foreach (StringKeyValueContract nestedTrackValueContract in nestedTrackValueContracts)
+                    {
+                        nestedTrackValueContract.Key = $"{property.Name}.{nestedTrackValueContract.Key}";
+                        yield return nestedTrackValueContract;
+                    }
+
+                }
+            }
+        }
+        /// <summary>
+        /// هندل کردن تایپ preimitive & string
+        /// </summary>
+        /// <param name="keyValueList"></param>
+        /// <param name="property"></param>
+        /// <param name="propertyValue"></param>
+        private static IEnumerable<StringKeyValueContract> HandlePrimitiveAndStringType(PropertyInfo property, object propertyValue)
+        {
+            StringKeyValueContract instanceValueContract = new StringKeyValueContract();
+            instanceValueContract.Key = property.Name;
+            instanceValueContract.Value = propertyValue.ToString();
+            yield return instanceValueContract;
+        }
+
+    }
