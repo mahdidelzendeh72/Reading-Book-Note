@@ -59,3 +59,10 @@ https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response?view=
 https://learn.microsoft.com/en-us/aspnet/core/mvc/advanced/custom-model-binding?view=aspnetcore-7.0
 
 https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation
+--------------------------
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
+https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.problemdetails?view=aspnetcore-7.0
+https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-7.0
+
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0
