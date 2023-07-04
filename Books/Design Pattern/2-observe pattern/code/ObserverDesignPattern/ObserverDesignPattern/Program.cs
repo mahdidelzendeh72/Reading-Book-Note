@@ -2,14 +2,12 @@
 using ObserverDesignPattern.Event_base;
 using ObserverDesignPattern.Implimentaion;
 using ObserverDesignPattern.Reactive_Extensions__Rx__library;
-using System.Reactive.Linq;
+
 
 public class Program
 {
-
     public static void Main(string[] args)
     {
-        
         //------------------  implement interfaces 1 -----------
         Subject subject = new Subject();
         ObserverA observerA = new ObserverA(subject);

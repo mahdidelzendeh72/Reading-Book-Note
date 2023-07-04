@@ -1,6 +1,6 @@
 ﻿using System.Reactive.Linq;
 
-namespace ObserverDesignPattern.Delegate_base
+﻿namespace ObserverDesignPattern.Delegate_base
 {
     // Delegate for the update method
     public delegate void StateChangedHandler(double stockPrice);
@@ -26,7 +26,7 @@ namespace ObserverDesignPattern.Delegate_base
         protected virtual void OnStateChanged(double stockPrice)
         {
             StateChanged?.Invoke(stockPrice);
-          
+
         }
     }
 
