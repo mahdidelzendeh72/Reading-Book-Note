@@ -1,0 +1,26 @@
+1-singleton + multitread===> eager load vs lazy load 
+2-singleton and class loader
+
+3-And reflection, and serialization/
+deserialization?
+4-singletone and subclass????
+5-singletone and enum????
+6- q: I still don’t totally understand
+why global variables are worse than a
+Singleton.
+
+A:In Java, global variables are basically
+static references to objects. There are a
+couple of disadvantages to using global
+variables in this manner. We’ve already
+mentioned one: the issue of lazy versus
+eager instantiation. But we need to keep
+in mind the intent of the pattern: to ensure
+only one instance of a class exists and to
+provide global access. A global variable can
+provide the latter, but not the former. Global
+variables also tend to encourage developers
+to pollute the namespace with lots of global
+references to small objects. Singletons don’t
+encourage this in the same way, but can be
+abused nonetheless
