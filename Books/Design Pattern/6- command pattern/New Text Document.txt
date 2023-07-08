@@ -1,0 +1,3 @@
+command patter combine observed==> example and usecase
+
+command patern in saga
