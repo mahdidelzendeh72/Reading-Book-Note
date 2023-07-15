@@ -1,0 +1,74 @@
+Inheritance and composition are two different approaches to achieve code reuse in object-oriented programming.
+
+Inheritance is a mechanism where a class derives properties and behaviors from another class.
+ It establishes an "is-a" relationship between the derived class (child) and the base class (parent). 
+The child class inherits all the members (fields, properties, methods) of the parent class and can also override or extend them.
+
+Composition, on the other hand, is a mechanism where a class contains an instance of another class as a member.
+ It establishes a "has-a" relationship between the containing class and the contained class. 
+The containing class can use the functionality of the contained class by calling its methods or accessing its properties.
+
+Here's an example in C# to illustrate both concepts:
+
+csharp
+// Inheritance example
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking");
+    }
+}
+
+// Composition example
+class Engine
+{
+    public void Start()
+    {
+        Console.WriteLine("Engine started");
+    }
+}
+
+class Car
+{
+    private Engine engine;
+
+    public Car()
+    {
+        engine = new Engine();
+    }
+
+    public void StartCar()
+    {
+        engine.Start();
+        Console.WriteLine("Car started");
+    }
+}
+
+// Usage
+static void Main(string[] args)
+{
+    // Inheritance usage
+    Dog dog = new Dog();
+    dog.Eat();  // Animal is eating
+    dog.Bark(); // Dog is barking
+
+    // Composition usage
+    Car car = new Car();
+    car.StartCar(); // Engine started, Car started
+}
+
+
+In the above example, the Dog class inherits from the Animal class, allowing
+ it to access the Eat method defined in the parent class. On the other hand, 
+the Car class has a composition relationship with the Engine class, as it contains 
+an instance of the Engine class as a member. The Car class can use the functionality 
+of the Engine class by calling its Start method.
