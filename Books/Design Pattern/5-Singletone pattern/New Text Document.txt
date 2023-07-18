@@ -1,7 +1,6 @@
-1-singleton + multitread===> eager load vs lazy load 
-2-singleton and class loader
 
-3-And reflection, and serialization/
+
+--3-And reflection, and serialization/
 deserialization?
 4-singletone and subclass????
 5-singletone and enum????
