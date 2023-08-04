@@ -1,0 +1,21 @@
+Two Way Adapter
+
+Object adapters and class adapters use two different
+means of adapting the adaptee (composition
+versus inheritance). How do these implementation
+differences affect the flexibility of the adapter?
+
+
+Enumeration<?> enumeration; syntax in C#???????
+
+
+Some AC adapters do more than just change the interface—they add other features
+like surge protection, indicator lights, and other bells and whistles.
+If you were going to implement these kinds of features, what pattern would you use?
+
+
+The Decorator Pattern and the Adapter
+Pattern discuss their differences.
+
+can you think of a common use of C# that
+violates the Principle of Least Knowledge

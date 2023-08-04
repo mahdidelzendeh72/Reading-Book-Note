@@ -1,0 +1,2 @@
+can you explain more System.IO.File? and how it implement factory pattern?
+can you explain more System.Net.WebRequest? and how it implement factory pattern?
