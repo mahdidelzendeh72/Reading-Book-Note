@@ -1,0 +1,31 @@
+What other patterns make use of the Hollywood Principle?
+
+sort method in array how use templated method?
+
+. For example, java.io has a
+read() method in InputStream that subclasses must implement and is
+used by the template method read(byte b[], int off, int len)
+
+
+We know that we should favor composition over inheritance, right? Well, the
+implementers of the sort() template method decided not to use inheritance and
+instead to implement sort() as a static method that is composed with a Comparable
+at runtime. How is this better? How is it worse? How would you approach this
+problem? Do Java arrays make this particularly tricky?
+
+
+Think of another pattern that is a specialization of the template method. In
+this specialization, primitive operations are used to create and return objects.
+What pattern is this?
+
+
+hook in git???
+
+The Strategy and Template
+Method Patterns both encapsulate
+algorithms, the first by composition
+and the other by inheritance.
+
+
+ Factory Method is a specialization
+of Template Method
